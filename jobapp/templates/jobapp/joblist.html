@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}
+{{name}}
+{% endblock title %}
+{% block main %}
+
+<section>
+    <div class="container">
+      <div class="view-post">
+        <h1 class="jobtitle">
+          {{jobOne.title}}
+        </h1>
+        <p class="location it">Location: <span>{{jobOne.locations.state}}</span></p>
+        <p class="status it">Type: <span>{{jobOne.jobtype}}</span></p>
+        <p class="budget it">Salary: <span>₹ {{jobOne.salary}} </span></p>
+        <div class="desc">
+          <p class="details">
+            {{jobOne.description}}
+          </p>
+        </div>
+      </div>
+    </div>
+</section>
+{% endblock main %}

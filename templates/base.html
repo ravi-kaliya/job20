@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+      rel="stylesheet"
+    />
+    <title>{% block title %}
+    {% endblock title %}</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="container">
+          <div class="logo">
+            <a href="{% url 'job' %}" onclick="menu()">
+                <img src="{% static 'images/logo.svg' %}" alt="" />
+            </a>
+          </div>
+          <div class="links">
+            <a href="{% url 'subscribe' %}" onclick="menu()">Subscribe</a>
+          </div>
+          <span class="material-icons menu" onclick="menu()"> menu </span>
+        </div>
+      </nav>
+    </header>
+  <main>
+{% block main %}
+
+{% endblock main %}
+  </main>
+  <footer>
+    <!-- place footer here -->
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="{% static 'app.js' %}"></script>
+    </body>
+</html>

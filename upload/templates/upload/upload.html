@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}
+    Upload File
+{% endblock title %}
+
+{% block main %}
+
+<form action="" method="POST" class="email-form" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{uf.as_p}}
+
+    <button type="submit" class="btn email-submit">Submit</button>
+</form>
+
+{% if ufso %}
+
+<h2>Upload Success : {{ ufso.image.url }}</h2>
+<h4>Image description : {{ ufso.description}}</h4>
+<img src="{{ ufso.image.url }}" alt="" srcset="" style="max-height: 200px; max-width: 300px;">
+
+{% endif %}
+
+{% endblock main %}

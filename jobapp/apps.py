@@ -1,0 +1,7 @@
+from django.apps import AppConfig
+
+
+class JobappConfig(AppConfig):
+    default_auto_field = 'django.db.models.BigAutoField'
+    name = 'jobapp'
+    verbose_name = 'Job Post Table'

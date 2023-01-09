@@ -1,0 +1,27 @@
+JOBPOST
+------------
+title,slug
+description
+
+salary
+date,modified
+
+type (FT,PT)
+
+locations 1-1
+authors *-1
+skills *-*
+
+LOCATION
+-----------
+street,state
+city,country
+zip
+
+AUTHOR
+-------------
+name,company,designation
+
+SKILL
+name
+------------

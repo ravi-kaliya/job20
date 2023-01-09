@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}
+    {{name}}
+{% endblock title %}
+{% block main %}
+<section>
+    <div class="container">
+        <form action="" method="POST" class="email-form">
+        {% csrf_token %}
+        {{sf.as_p}}
+        <button class="email-submit">Submit</button>
+    </div>
+</section>
+{% endblock main %}
